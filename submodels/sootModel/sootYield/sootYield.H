@@ -25,11 +25,8 @@ Class
     Foam::radiation::sootYield
 
 Description
-    This soot model is purely an state model. The ammount of soot produced is
-    determined as a Triangle function of the mixture fraction (Burke–Schumann like)
-    with maximum mass fraction etaSoot*Z_st
-
-    etaSoot is prescribed by the user.
+    The ammount of soot produced is determined as afraction of the fuel
+    mass using the quantity sootYield that is prescribed by the user.
 
     The input dictionary reads like in the radiationProperties dictionary:
 
@@ -37,8 +34,8 @@ Description
 
     sootYieldCoeffs
     {
-        fuel          	C3H8;       
-    	fvMax         	0.5;
+        sovleSoot          	true;       
+    	sootYield         	0.05;
     }
 
 SourceFiles
